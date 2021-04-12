@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "启动程序",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/index.ts",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js",
+                "${workspaceFolder}/node_modules/testpackage/**/*.js",
+                // "/Users/liudong/ldd/test__/testpackage/**/*.js"
+            ],
+            // "resolveSourceMapLocations": [
+            //     "node_modules/testpackage/*.js",
+            // ],
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--preserve-symlinks-main",
+                "--experimental-modules"
+            ]
+        }
+    ]
+}
